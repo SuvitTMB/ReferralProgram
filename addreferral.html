@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ONE Retail Socitey</title>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <link href="assets/img/favicom.ico" rel="icon">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/w3.css" rel="stylesheet">
+
+  <link href="assets/css/rewards.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/css.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+  <style>
+    .mb-5 { margin-bottom: 1.0rem!important; }
+    .filter {
+        filter: grayscale(1);
+    }
+  </style>
+</head>
+
+<body>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <section id="topbar" class="d-flex align-items-center" style="height: 1px; background: transparent;">
+  </section>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a href="index.html"><img src="./img/logo.png" style="height: 40px;"></a>
+    </div>
+  </header>
+  <div id="DisplayNav"></div>
+
+  <main id="main">
+    <section id="about" class="featured-services">
+      <div class="section-title">
+        <h2>เลือกรายการที่ต้องการ</h2>
+        <!--<p><br><b>กรุณาเลือกคลิกเลือกผลิตภัณฑ์ที่คุณนำเสนอ<br>ให้ผู้ที่สนใจในผลิตภัณฑ์ธนาคาร</b></p>-->
+      </div>
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <center>
+            <div id="1" class="icon-menulink" onclick="ClickOpenApp(1)"><img src="./icon/CC.png" class="img-product"><div class="box-5px">บัตรเครดิต</div></div>
+            <div id="2" class="icon-menulink" onclick="ClickOpenApp(2)"><img src="./icon/PL.png" class="img-product"><div class="box-5px">สินเชื่อบุคคล</div></div>
+            <div id="3" class="icon-menulink" onclick="ClickOpenApp(3)"><img src="./icon/HL.png" class="img-product"><div class="box-5px">สินเชื่อบ้าน</div></div>
+            <div id="4" class="icon-menulink" onclick="ClickOpenApp(4)"><img src="./icon/AL.png" class="img-product"><div class="box-5px">สินเชื่อรถยนต์</div></div>
+            <div id="5" class="icon-menulink" onclick="ClickOpenApp(5)"><img src="./icon/BA Life.png" class="img-product"><div class="box-5px">บัตรเครดิต</div></div>
+            <div id="6" class="icon-menulink" onclick="ClickOpenApp(6)"><img src="./icon/BA Non Life.png" class="img-product"><div class="box-5px">ประกันรถยนต์</div></div>
+            <div id="7" class="icon-menulink" onclick="ClickOpenApp(7)"><img src="./icon/MF.png" class="img-product"><div class="box-5px">กองทุนรวม</div></div>
+          </center>
+          <div class="clr" style="height: 8px;"></div>
+
+          <div id="loading" style="margin-top:80px;">
+            <center>
+              <div style="margin-top:20px;"><img src="./img/loading.gif" style="width:40px;"></div>
+            </center>
+          </div>
+          <div id="DisplayWeb"></div>
+          <center>
+            <div class="btn-t1" onclick="GotoHome()" style="margin-top:20px;">กลับหน้าหลัก</div>
+          </center>
+        </div>
+      </div>
+    </section>
+
+
+
+<!--
+    <section id="intro" class="faq">
+      <div class="container" data-aos="fade-up">
+        <div><br>
+          <a href="https://youtu.be/e8-WmjKdfRo?si=yrIF_fCfsJb-zQox" class="glightbox btn-watch-video"><i class="bi bi-play-circle"></i> <span>Watch Video</span></a><br><br><br>
+        </div>
+      </div>
+      <div class="clr" style="height: 50px;"></div>
+    </section>
+-->
+  </main>
+
+
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity">
+    <div class="w3-modal-content w3-card-4">
+      <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+        <div id="DataFaiFahCenter"></div>
+      </div>
+        <center>
+          <div onclick="CloseAll()" class="btn btn-a1 grey" style="margin:10px auto 30px auto;">ปิดหน้าต่างนี้</div>
+        </center>
+    </div>
+    <div class="clr" style="height: 60px;"></div>
+  </div>
+
+
+  <div id="menu" class="w3-modal w3-animate-opacity" style="margin-top:-50px;z-index: 99999;">
+    <div class="w3-modal-content w3-card-4 bg-menu">
+      <div class="w3-container container-min">
+        <div id="MenuSociety"></div>
+      </div>
+    </div>
+    <div class="clr" style="height:45px;"></div>
+  </div>
+
+
+  <div class="clr" style="height:50px;"></div>
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <script src="assets/js/main.js"></script>
+  <script src="./js/connect.js"></script>
+  <script src="./js/addreferral.js"></script>
+  <!--
+  -->
+</body>
+
+</html>
